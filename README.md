@@ -1,15 +1,48 @@
-
-Bowling Challenge
-=================
+##Bowling Challenge
 [![Build Status](https://travis-ci.org/adrianw1832/bowling-challenge.svg?branch=master)](https://travis-ci.org/adrianw1832/bowling-challenge)
 
-How I approached the challenge
-------------------------------
+This project is from the week 5 and 6 weekend challenge of the Makers Academy
+course. The challenge is to build a bowling score card and, as a bonus, put a
+web interface to it. I initially started by implementing all the basic features
+first, without considering spares and strikes. After that, I considered adding
+spares and strikes and at the end, the tenth frame, and game ending conidtions.
+if I changed it to increase the frame number only when the next ball is rolled.
+I felt this challenge really reinforced the importance of TDD, MVP, and SRP,
+and the importance to write robust tests that really cover the different
+possibilities to ensure that everything is working as intended.
 
-I initally started by implementing all the basic features first, without considering spares and strikes. After that, I considered adding spares and strikes and at the end, the tenth frame, and game ending conidtions. I stuck to SRP as much as possbile but the game logic did get a bit much near the end, especially considering the fact that in my implementation, I am also tracking the frame total. I did underestimate it at the beginning but I came through in the end. There was actually one big design change which drove me to change how I tracked the frame number, when I was implementing the GUI for the scorecard. In my original implementation, the frame number would automatically increase at the end of a strike or two rolls, but this caused some problems when I tried to log the rolls and scores on the table. The reason was that I would always be trying to log things from the previous frame number, and this would cause further complications in the tenth frame. My code would be a lot cleaner if I changed it to increase the frame number only when the next ball is rolled. I felt this challenge really reinforced the importance of TDD, MVP, and SRP, and the importance to write robust tests that really cover the different possiblities to ensure that everything is working as intended.
+##Challenges
 
-    Test time: Friday, the entire day and the weekend if you need it.
-    Feel free to use Google, your notes, and your books.
+I stuck to Single Responsibility Principles as much as possible but the game
+logic did get a bit much near the end, especially considering the fact that in
+my implementation, I am also tracking the frame total. I did underestimate it at
+the beginning but I came through in the end. There was actually one big design
+change which drove me to change how I tracked the frame number, when I was
+implementing the GUI for the scorecard. In my original implementation, the frame
+number would automatically increase at the end of a strike or two rolls, but
+this caused some problems when I tried to log the rolls and scores on the table.
+The reason was that I would always be trying to log things from the previous
+frame number, and this would cause further complications in the tenth frame. My
+code would be cleaner also by moving several components out to different files,
+which is a feedback that I got, and I will keep that in my mind for next time.
+
+##Technologies used
+
+Javascript, jQuery, HTML, CSS
+
+Jasmine, Jasmine jQuery
+
+##How to install
+
+Clone the repo and just do open index.html in the terminal to see the scorecard.
+
+To run the tests, run open specrunner.html. It might be advisable to run them in
+Safari rather than Chrome due to security conflicts.
+
+##Instructions
+
+Test time: Friday, the entire day and the weekend if you need it.
+Feel free to use Google, your notes, and your books.
 
 Task:
 -----
